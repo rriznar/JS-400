@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+
+<body>
+<p>JS-403</p>
+<p>Zagrade</p>
+
+
+<script>
+
+let zagrade = function(s) {
+     const zag = {
+            '(': ')',
+            '{': '}',
+            '[': ']'
+          }
+   
+    let stog = []
+        for(let z of s){
+  
+            if(zag[z]){
+            stog.push(z)
+            
+            }else if(stog.length > 0 && zag[stog[stog.length-1]] === z){
+              
+          stog.pop()
+        }else{
+            
+            return false
+        }
+    }
+    
+   return stog.length === 0
+};
+
+console.log(zagrade("[()]()()"));
+console.log(zagrade("{[((()))]}"));
+console.log(zagrade("({)}"));
+
+</script>
+
+</body>
+</html>

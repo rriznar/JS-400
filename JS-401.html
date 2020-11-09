@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+
+<body>
+<p>JS-401</p>
+<p>Lista studenata</p>
+
+
+<script>
+
+let lista = [
+{
+    ime: "Dean",
+    prezime : "Guthrie",
+    Upisan : true
+},
+{
+    ime: "Luisa",
+    prezime : "Phelps",
+    Upisan : true
+},
+{
+    ime: "Sheena",
+    prezime : "Marriott",
+    Upisan : false
+},
+{
+    ime: "Mikail",
+    prezime : "Gonzales",
+    Upisan : false
+},
+{
+    ime: "Eilish",
+    prezime : "Stamp",
+    Upisan : true
+},
+{
+    ime: "Rory",
+    prezime : "Cooley",
+    Upisan : true
+},
+{
+    ime: "Bryson",
+    prezime : "Calhoun",
+    Upisan : false
+},
+{
+    ime: "Bryson",
+    prezime : "Calhoun",
+    Upisan : false
+},
+{
+    ime: "Mira",
+    prezime : "Rhodes",
+    Upisan : true
+},
+{
+    ime: "Joe",
+    prezime : "Becker",
+    Upisan : false
+}
+
+];
+
+function provjeri(lista,pojam){
+    const element = lista.find((pojam) => {
+            return pojam.ime === "Dean";
+        });
+        return typeof element === "undefined" ? false : true;
+}
+console.log(provjeri(lista,"Dean"));
+</script>
+
+</body>
+</html>
